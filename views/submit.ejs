@@ -7,7 +7,7 @@
     <title>Submit Page</title>
     <link rel="icon" type="image/png" href="/images/survey_icon.png?v=1"> <!-- Favicon -->
 </head>
-<body class="submit-page">
+<body id="submit-page">
     <div id="submit-container" >
         <h2>Thank you for the feedback, <%= details.fname %> <%= details.lname %>!</h2>
         <p>Email: <span class="blue-text"><%= details.email %></span></p>
@@ -27,12 +27,8 @@
             <% } %>
         </p>
         <img src="/images/smiles.JPG" alt="Emotions Image" id="emotion-img">
+        <a href="/" class="button">Submit Another Feedback</a> <!-- Lead back to home page -->
+        <a href="/feedback" class="button">View All Feedback</a> <!-- Lead to feedback page -->
     </div>
-
-    <div id="button-container">
-        <a href="/" id="buttons-submit">Submit Another Feedback</a> <!-- Lead back to home page -->
-        <a href="/feedback" id="buttons-submit">View All Feedback</a> <!-- Lead to feedback page -->
-    </div>
-
 </body>
 </html>

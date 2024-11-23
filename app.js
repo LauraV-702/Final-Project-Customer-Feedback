@@ -36,8 +36,9 @@ app.set('view engine', 'ejs');
 
 // Define a "default" route
 app.get('/', (req, res) => {
-    // testing usability
-    console.log("Hello, world - server!");
+	// testing usability
+	console.log("Hello, world - server!");
+    
     // Display home page
     res.render('home');
 });
@@ -70,16 +71,6 @@ app.get('/feedback', async (req, res) => {
     } catch (err) {
         console.log('Error retrieving feedback data: ' + err);
     }
-});
-
-// GET "home" route
-app.get('/home', (req, res) => {
-    res.render('home'); 
-});
-
-// GET "feedback" route
-app.get('/feedback', (req, res) => {
-    res.render('feedback'); 
 });
 
 // Tell the app to listen for requests on the designated port

@@ -26,7 +26,7 @@ body {
     animation: colorChange 7s infinite;
 }
 
-h3{
+h3 {
     color: red;
     text-align: center;
     animation: colorChange 7s infinite;
@@ -75,6 +75,7 @@ button[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease; /* transition */
 }
 
@@ -110,7 +111,7 @@ textarea {
 /* submit.ejs styling */
 #submit-container {
     width: 30%;
-    height: 600px;
+    height: 680px;
 }
 
 body#submit-page {
@@ -138,6 +139,24 @@ body#submit-page {
     width: 70%;
 }
 
+.button {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007e17; 
+    color: white; 
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 14px; 
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+.button:hover {
+    background-color: #0cb300; 
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
 /* COMPUTER SCREEN (DESKTOP) */
 @media only screen and (min-width: 401px) {
     #submit-container {
@@ -157,10 +176,13 @@ body#feedback-page {
     background-color: #e6dbcb;
 }
 
-/* TABLE FORMATING */
 #customer-feedback {
-    width: 30%;
     height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;  
+    border-spacing: 0;
 }
 
 #customer-feedback h2 {
@@ -171,18 +193,13 @@ body#feedback-page {
     margin-top: 35px;
 }
 
-/* REFERENCED FROM W3Schools with unique modifications */
-#customer-feedback {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
-    border-spacing: 0; 
-    margin: 0 auto;
-}
-
 #customer-feedback td, #customer-feedback th {
-    border: 2px solid #111;
-    padding: 8px;
+    border: 1px solid #111;
+    padding: 8px; 
+    font-size: 12px; 
+    text-align: center;
+    word-wrap: break-word; 
+    white-space: normal; 
 }
 
 #customer-feedback tr:nth-child(even) {
@@ -200,53 +217,37 @@ body#feedback-page {
     color: white;
 }
 
-/* REFERENCED FROM w3schools with unique inputs */
-#buttons {
-    background-color: #7aa796; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
+/* Default styling for mobile title (hidden on larger screens) */
+#mobile-entries-title {
+    display: none; 
+    margin-bottom: 10px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+}
 
-    margin-top: 20px;
-    margin-left: 30%;
-    margin-right: 30%;
+#home-button {
     display: block;
-}
-
-/* Style the parent container to use flexbox */
-.button-container {
-    display: flex; /* This makes the container a flexbox */
-    justify-content: center; /* Centers the buttons horizontally */
-    gap: 30px; /* Adds space between buttons */
-}
-
-/* Style the buttons */
-#buttons-submit {
-    background-color: #7aa796; 
-    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #2a9d8f;
     color: white;
-    padding: 15px;
     text-align: center;
     text-decoration: none;
-    font-size: 10px;
-    width: auto; /* Ensures buttons maintain their natural width */
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
 }
 
-#button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
+#home-button:hover {
+    background-color: #1a655c;
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
 /* COMPUTER SCREEN (DESKTOP) */
 @media only screen and (min-width: 401px) {
-    #customer-feedback {
+    #submit-container {
         width: 400px;  /* Set fixed width for larger screens */
     }
 }
@@ -255,5 +256,49 @@ body#feedback-page {
 @media only screen and (max-width: 400px) {
     #submit-container {
         width: 90%; /* Adjust the width for mobile */
+    }
+}
+
+/* Mobile (Phone & Small Tablets) */
+@media only screen and (max-width: 600px) {
+    #mobile-entries-title {
+        display: block;  
+        font-size: 18px;  
+        font-weight: bold;
+        text-align: center; 
+        margin-bottom: 10px; 
+    }
+
+    #customer-feedback {
+        width: 100%;  
+        padding: 0;  
+        margin: 0;    
+    }
+
+    /* Make table cells stack vertically on mobile */
+    #customer-feedback td, #customer-feedback th {
+        display: block;  
+        width: 100%;     
+        box-sizing: border-box;  
+        text-align: left;  
+        padding: 10px;     
+    }
+
+    #customer-feedback td {
+        border: none;
+        border-bottom: 1px solid #ddd; 
+    }
+
+    /* Optional: Reduce font size for mobile */
+    #customer-feedback td, #customer-feedback th {
+        font-size: 14px;
+    }
+
+    /* Display headers inside cells as labels */
+    #customer-feedback td::before {
+        content: attr(data-label); 
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
     }
 }
