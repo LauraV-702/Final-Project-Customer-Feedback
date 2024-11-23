@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>Submit Page</title>
+    <link rel="icon" type="image/png" href="/images/survey_icon.png?v=1"> <!-- Favicon -->
+</head>
+<body class="submit-page">
+    <div id="submit-container" >
+        <h2>Thank you for the feedback, <%= details.fname %> <%= details.lname %>!</h2>
+        <p>Email: <span class="blue-text"><%= details.email %></span></p>
+        <p>Experience Feedback: <span class="blue-text"><%= details.experience %></span></p>
+        <p>Suggestions: <span class="blue-text"><%= details.suggestions %></span></p>
+
+        <!-- Display a message based on the experience selected -->
+        <p id="feedback-message">
+            <% if (details.experience === 'Good') { %>
+                We're glad to hear that you had a good experience!
+            <% } else if (details.experience === 'Bad') { %>
+                We're sorry to hear that your experience wasn't great. We'll work on improving!
+            <% } else if (details.experience === 'Average') { %>
+                We strive to do better and appreciate your input.
+            <% } else { %>
+                Thanks for your feedback!
+            <% } %>
+        </p>
+        <a href="/home">Submit Another Feedback</a>
+        <a href="/feedback">View All Feedback</a>
+        <img src="/images/NewImage.JPG" alt="Emotions Image" id="emotion-img">
+    </div>
+</body>
+</html>

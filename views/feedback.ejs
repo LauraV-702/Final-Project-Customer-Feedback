@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Feedback</title>
+</head>
+<body>
+    <h1>All Feedback</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Feedback</th>
+                <th>Rating</th>
+                <th>Submitted At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% feedbacks.forEach(feedback => { %>
+                <tr>
+                    <td><%= feedback.name %></td>
+                    <td><%= feedback.email %></td>
+                    <td><%= feedback.feedback %></td>
+                    <td><%= feedback.rating %></td>
+                    <td><%= feedback.created_at %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <a href="/home">Go Back to Submit More Feedback</a>
+</body>
+</html>
