@@ -59,6 +59,8 @@ app.post('/submission', async (req, res) => {
     res.render('submit', { details: details });
 });
 
+
+
 // Define a route to fetch and display all feedback
 app.get('/feedback', async (req, res) => {
     const conn = await connect();
@@ -70,7 +72,13 @@ app.get('/feedback', async (req, res) => {
     }
 });
 
+app.get('/feedback', (req, res) => {
+    res.render('feedback');  // Renders the 'feedback.ejs' view
+});
 
+app.get('/home', (req, res) => {
+    res.render('home');  // Renders the 'home.ejs' view again
+});
 
 // Tell the app to listen for requests on the designated port
 app.listen(PORT, () => {
