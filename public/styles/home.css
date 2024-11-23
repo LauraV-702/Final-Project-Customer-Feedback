@@ -26,6 +26,12 @@ body {
     animation: colorChange 7s infinite;
 }
 
+h3{
+    color: red;
+    text-align: center;
+    animation: colorChange 7s infinite;
+}
+
 /* Transition for color change text header */
 @keyframes colorChange {
     0% {
@@ -144,4 +150,48 @@ body.submit-page {
     #submit-container {
         width: 90%; /* Adjust the width for mobile */
     }
+}
+
+/* TABLE FORMATING */
+#customer-feedback {
+    width: 30%;
+    height: 600px;
+}
+
+#customer-feedback h2 {
+    text-align: center;
+}
+
+#customer-feedback p {
+    margin-top: 35px;
+}
+
+
+/* REFERENCED FROM W3Schools with unique modifications */
+#customer-feedback {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    border-spacing: 0; 
+    margin: 0 auto;
+}
+
+#customer-feedback td, #customer-feedback th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customer-feedback tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customer-feedback tr:hover {
+    background-color: #ddd;
+}
+
+#customer-feedback th {
+    padding: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
 }
