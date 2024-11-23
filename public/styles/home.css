@@ -20,7 +20,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#form-container h1, #submit-container h2 {
+#form-container h1, #submit-container h2, h2 {
     color: red;
     text-align: center;
     animation: colorChange 7s infinite;
@@ -113,7 +113,7 @@ textarea {
     height: 600px;
 }
 
-body.submit-page {
+body#submit-page {
     background-color: rgb(188, 252, 222);
 }
 
@@ -152,6 +152,11 @@ body.submit-page {
     }
 }
 
+/* feedback.ejs styling */
+body#feedback-page {
+    background-color: #e6dbcb;
+}
+
 /* TABLE FORMATING */
 #customer-feedback {
     width: 30%;
@@ -166,7 +171,6 @@ body.submit-page {
     margin-top: 35px;
 }
 
-
 /* REFERENCED FROM W3Schools with unique modifications */
 #customer-feedback {
     font-family: Arial, Helvetica, sans-serif;
@@ -177,21 +181,79 @@ body.submit-page {
 }
 
 #customer-feedback td, #customer-feedback th {
-    border: 1px solid #ddd;
+    border: 2px solid #111;
     padding: 8px;
 }
 
 #customer-feedback tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #78bece;
 }
 
 #customer-feedback tr:hover {
-    background-color: #ddd;
+    background-color: #2a9d8f;
 }
 
 #customer-feedback th {
     padding: 12px;
-    text-align: left;
-    background-color: #04AA6D;
+    text-align: center;
+    background-color: #264653;
     color: white;
+}
+
+/* REFERENCED FROM w3schools with unique inputs */
+#buttons {
+    background-color: #7aa796; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    display: block;
+}
+
+/* Style the parent container to use flexbox */
+.button-container {
+    display: flex; /* This makes the container a flexbox */
+    justify-content: center; /* Centers the buttons horizontally */
+    gap: 30px; /* Adds space between buttons */
+}
+
+/* Style the buttons */
+#buttons-submit {
+    background-color: #7aa796; 
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    width: auto; /* Ensures buttons maintain their natural width */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* COMPUTER SCREEN (DESKTOP) */
+@media only screen and (min-width: 401px) {
+    #customer-feedback {
+        width: 400px;  /* Set fixed width for larger screens */
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 400px) {
+    #submit-container {
+        width: 90%; /* Adjust the width for mobile */
+    }
 }

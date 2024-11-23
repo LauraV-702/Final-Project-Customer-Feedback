@@ -1,21 +1,18 @@
-CREATE DATABASE feedback;
+CREATE DATABASE customer;
 
-USE feedback;
+USE customer;
 
-DROP TABLE IF EXISTS feedback;
-
-CREATE TABLE feedback (
-    id INT AUTO_INCREMENT PRIMARY KEY,       
-    firstname VARCHAR(100) NOT NULL,               
-    lastname VARCHAR(100) NOT NULL,               
-    email VARCHAR(100) NOT NULL,              
-    feedback TEXT NOT NULL,                 
-    rating VARCHAR(50),                               
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+CREATE TABLE survey (
+    id INT(10) PRIMARY KEY AUTO_INCREMENT,   
+    fname VARCHAR(255),               
+    lname VARCHAR(255),               
+    email VARCHAR(100),              
+    experience VARCHAR(100),                 
+    suggestions VARCHAR(100),                               
+    timestamp DATETIME DEFAULT NOW()
 );
 
-INSERT INTO feedback (firstname, lastname, email, feedback, rating)
-VALUES 
-    ('John', 'Doe', 'john.doe@example.com', 'Great service, will come again!', 5);
+INSERT INTO survey (fname, lname, email, experience, suggestions)
+VALUES ('Joe', 'Smith', 'joe123@gmail.com', 'Good', 'Please add more features!');
 
-SELECT * FROM feedback;
+SELECT * FROM survey;
