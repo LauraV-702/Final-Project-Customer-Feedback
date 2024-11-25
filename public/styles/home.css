@@ -20,13 +20,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#form-container h1, #submit-container h2, h2 {
-    color: red;
-    text-align: center;
-    animation: colorChange 7s infinite;
-}
-
-h3 {
+#form-container h1, h2 {
     color: red;
     text-align: center;
     animation: colorChange 7s infinite;
@@ -118,10 +112,6 @@ body#submit-page {
     background-color: rgb(188, 252, 222);
 }
 
-#submit-container h2 {
-    text-align: center;
-}
-
 #submit-container p {
     margin-top: 35px;
 }
@@ -183,14 +173,6 @@ body#feedback-page {
     margin: 0 auto;
     width: 100%;  
     border-spacing: 0;
-}
-
-#customer-feedback h2 {
-    text-align: center;
-}
-
-#customer-feedback p {
-    margin-top: 35px;
 }
 
 #customer-feedback td, #customer-feedback th {

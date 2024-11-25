@@ -22,13 +22,13 @@ Additionally, the `Feedback Page` is available to display all feedback entries i
   - A thank you message with the user's full name and feedback.
   - A summary of the user's email, experience, and suggestions.
   - Two buttons:
-    - **Go Back to Home**: Returns the user to the survey form to submit more feedback.
+    - **Submit Another Feedback**: Returns the user to the survey form to submit more feedback.
     - **View All Feedback**: Directs the user to the feedback page to see all survey entries.
 
 - **Feedback Page**:  
   This page displays a table listing all submitted feedback entries from the database. The table includes:
   - **First Name**, **Last Name**, **Email**, **Experience**, and **Suggestions**.
-  - A button to **Go Back to Home**, which allows the user to submit another feedback form.
+  - A button to **Back to Home Page**, which allows the user to submit another feedback form.
 
 ## Known Limitations
 
