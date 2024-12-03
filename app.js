@@ -2,6 +2,8 @@
 const express = require('express');
 const mariadb = require('mariadb');
 
+require('dotenv').config();
+
 // Instantiate an express (web) app
 const app = express();
 
@@ -10,10 +12,10 @@ const PORT = 3000;
 
 // Configure the database connection
 const pool = mariadb.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '1234',
-    database: 'customer'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 });
 
 // Connect to the database

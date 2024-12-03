@@ -50,3 +50,4 @@ Additionally, the `Feedback Page` is available to display all feedback entries i
 - `EJS (Embedded JavaScript Templating)`
 - `MariaDB & MySQL Workbench`
 - `HTML & CSS (Responsive Design)`
+- `Dotenv (.env File)`
